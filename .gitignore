@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment files
+.env
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Local environments
+.venv/
+env/
+venv/
+.local/
+
+# Log files
+*.log
+
+# Data files and outputs
+*.db
+*.sqlite
+*.csv
+*.tsv
+*.json
+*.xlsx
+
+# Uploads / User inputs
+uploaded_docs/
+chroma_db/
+*.mhd
+*.raw
+
+# Ollama models (optional, large files)
+ollama_models/
+
+# VSCode
+.vscode/
+
+# Streamlit cache
+.streamlit/
+__pypackages__/
+
+# pyproject build artifacts
+build/
+dist/
+*.egg-info/
+
+# Pip dependency resolver
+pip-log.txt
