@@ -1,0 +1,4 @@
+Project Title: "Rag-Chat"
+Project Link: "https://github.com/Tajaar/Rag-chat"
+Domains: ["LLM","ML","Chatbot"]
+Description: "This project is a Retrieval-Augmented Generation (RAG) based chatbot that allows you to upload a PDF and interact with it conversationally. The system retrieves semantically relevant document chunks using ChromaDB and generates contextual answers using a local LLM via Ollama."
