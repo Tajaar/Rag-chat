@@ -32,60 +32,63 @@ Rag-chat/
 
 ---
 
-## 🔧 Installation
+### 🛠️ Project Execution Steps
 
-### 1. Clone the Repository
+1. **Clone the Repository**
 
 ```bash
 git clone https://github.com/your-username/rag-chatbot.git
 cd rag-chatbot
 ```
 
-### 2. Create a Virtual Environment and Install Dependencies
+2. **📦 Environment Setup**
+   - Create a new Python environment using Anaconda or `venv`.
+   - Install required dependencies using `pip`:
+     ```bash
+     pip install -r requirements.txt
+     ```
 
-Using Conda:
+3. **🚀 Start Ollama**
+   - Make sure [Ollama](https://ollama.com) is installed.
+   - Pull and start the model (e.g., Llama 3):
+     ```bash
+     ollama pull llama3
+     ollama serve
+     ```
+     
+4. **📁 Directory Setup**
+   Ensure the following structure is present:
+   ```
+   project/
+   ├── app/
+   │   ├── interface.py
+   │   └── retriever.py
+   ├── utils.py
+   ├── chat_histories/
+   ├── requirements.txt
+   ```
 
-```bash
-conda create -n local-rag python=3.10 -y
-conda activate local-rag
-pip install -r requirements.txt
-```
+5. **💬 Run the Streamlit App**
+   - From the project root, launch the app:
+     ```bash
+     streamlit run app/interface.py
+     ```
 
----
+6. **📄 Upload Document & Chat**
+   - Use the web interface to upload a PDF.
+   - Ask questions about the content and receive structured responses.
 
-## 🧠 Ollama Setup
+7. **💾 Save & Rename Chats**
+   - Use the sidebar to rename or delete chat sessions.
+   - Chats are saved as `.json` files under the `chat_histories/` directory.
 
-Install Ollama from [https://ollama.com](https://ollama.com).
-
-Then run the model:
-
-```bash
-ollama run mistral
-```
-
-Make sure the Ollama server is running before launching the app.
-
----
-
-## 🔐 Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-EMBEDDING_MODEL=all-MiniLM-L6-v2
-PERSIST_DIRECTORY=./chroma_db
-```
-
----
-
-## ▶️ Running the App
-
-```bash
-streamlit run app/interface.py
-```
-
-Then open [http://localhost:8501](http://localhost:8501) in your browser.
-
+8. **📌 Notes**
+   - Ensure Ollama is running before starting the app.
+   - If you face module import issues, run Streamlit from the **project root**:
+     ```bash
+     cd project
+     streamlit run app/interface.py
+     ```
 ---
 
 ## ⚙️ How It Works
